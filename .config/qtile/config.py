@@ -78,6 +78,9 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
+    # Personal Keybindings
+    Key([mod], "b", lazy.spawn('firefox'), desc="Start browser"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
