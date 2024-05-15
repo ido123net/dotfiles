@@ -1,0 +1,7 @@
+.config/Code - OSS
+.vscode
+*.pyc
+
+# Auto genereted files
+.config/pulse
+.config/systemd
