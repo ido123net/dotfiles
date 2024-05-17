@@ -6,3 +6,4 @@
 .config/pulse
 .config/systemd
 .config/dconf
+.config/neofetch
