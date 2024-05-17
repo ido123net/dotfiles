@@ -24,7 +24,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, qtile, widget
+import subprocess
+
+from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -34,6 +36,12 @@ from mylib import get_random_wallpaper, get_wallpepers
 mod = "mod4"
 terminal = guess_terminal()
 wallpapers = get_wallpepers()
+
+
+@hook.subscribe.startup_once
+def startup() -> None:
+    subprocess.Popen(['/bin/picom'])
+
 
 keys = [
     # A list of available commands that can be bound to keys can be found
