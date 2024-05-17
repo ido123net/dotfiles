@@ -92,6 +92,7 @@ keys = [
 
     # Personal Keybindings
     Key([mod], "b", lazy.spawn('firefox'), desc="Start browser"),
+    Key([mod], "c", lazy.spawn('code'), desc="Start VScode"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
