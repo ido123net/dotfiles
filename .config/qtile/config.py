@@ -33,6 +33,7 @@ from libqtile.utils import guess_terminal
 
 from mylib import get_random_wallpaper, get_wallpapers
 
+alt = "mod1"
 mod = "mod4"
 terminal = guess_terminal()
 wallpapers = get_wallpapers()
@@ -93,6 +94,7 @@ keys = [
     # Personal Keybindings
     Key([mod], "b", lazy.spawn('firefox'), desc="Start browser"),
     Key([mod], "c", lazy.spawn('code'), desc="Start VScode"),
+    Key([alt], 'Tab', lazy.widget["keyboardlayout"].next_keyboard(), desc="Switch between keyboard layout"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -172,11 +174,10 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
+                widget.KeyboardLayout(configured_keyboards=['us', 'il'], display_map={'us': 'EN', 'il': 'HE'}),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
             ],
