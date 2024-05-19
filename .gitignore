@@ -7,3 +7,4 @@
 .config/systemd
 .config/dconf
 .config/neofetch
+.config/chromium
