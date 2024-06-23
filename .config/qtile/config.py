@@ -42,6 +42,7 @@ wallpapers = get_wallpapers()
 @hook.subscribe.startup_once
 def startup() -> None:
     subprocess.Popen(['/bin/picom'])
+    subprocess.Popen(['/usr/bin/unclutter'])
 
 
 keys = [
