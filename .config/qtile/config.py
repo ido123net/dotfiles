@@ -95,7 +95,7 @@ keys = [
     # Personal Keybindings
     Key([mod], "b", lazy.spawn('firefox'), desc="Start browser"),
     Key([mod], "c", lazy.spawn('code'), desc="Start VScode"),
-    Key([alt], 'Tab', lazy.widget["keyboardlayout"].next_keyboard(), desc="Switch between keyboard layout"),
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Switch between keyboard layout"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
